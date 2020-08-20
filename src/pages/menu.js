@@ -17,6 +17,7 @@ const CartIcon = ({ numTotalItems, onClick }) => {
           marginLeft: "5vw",
         }}
         onClick={onClick}
+        onKeyDown={{}}
       >
         <Icon medium>local_dining</Icon>
         <div

@@ -4,7 +4,7 @@ import React from "react"
 
 import "../css/header.css"
 
-import logo from "../images/ranken_logo.png"
+import logo from "../images/ranken_logo.jpg"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
         src={logo}
         style={{
           position: "absolute",
-          width: 80,
+          width: 100,
           marginLeft: 10,
           marginTop: 10,
         }}

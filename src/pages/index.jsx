@@ -1,17 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from "../components/seo"
 import { BrowserView, MobileView } from "react-device-detect"
-import { Card, Row, Col, CardTitle, Icon } from "react-materialize"
-
-import front_menu_image from "../images/Front_Menu_Image.jpg"
-import front_map from "../images/ranken_map.jpg"
-import under_construction from "../images/under_construction.png"
+import { Card, Row, Col } from "react-materialize"
+import Img from "gatsby-image"
 
 const IndexPage = () => {
+  const images = useStaticQuery(graphql`
+    query {
+      front_menu_image: file(relativePath: { eq: "Front_Menu_Image.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      front_map: file(relativePath: { eq: "ranken_map.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      under_construction: file(relativePath: { eq: "under_construction.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <SEO title="Home" />
@@ -28,7 +51,9 @@ const IndexPage = () => {
                     Order Online
                   </Link>,
                 ]}
-                header={<CardTitle image={front_menu_image}></CardTitle>}
+                header={
+                  <Img fluid={images.front_menu_image.childImageSharp.fluid} />
+                }
               ></Card>
             </Col>
             <Col s={4}>
@@ -41,7 +66,7 @@ const IndexPage = () => {
                     Store Locator
                   </Link>,
                 ]}
-                header={<CardTitle image={front_map}></CardTitle>}
+                header={<Img fluid={images.front_map.childImageSharp.fluid} />}
               ></Card>
             </Col>
             <Col s={4}>
@@ -51,7 +76,11 @@ const IndexPage = () => {
                     News
                   </Link>,
                 ]}
-                header={<CardTitle image={under_construction}></CardTitle>}
+                header={
+                  <Img
+                    fluid={images.under_construction.childImageSharp.fluid}
+                  />
+                }
               ></Card>
             </Col>
           </Row>

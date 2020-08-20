@@ -4,7 +4,6 @@ module.exports = {
     description: `Japanese style Ramen made with the finest ingredients ever. Never from concentrate. `,
     author: `Jaden Shiteng Wang`,
   },
-  pathPrefix: "/Ranken",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
