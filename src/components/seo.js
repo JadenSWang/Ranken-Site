@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
       />
       <link
         rel="stylesheet"
-        href="http://fonts.googleapis.com/icon?family=Material+Icons"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
       />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" />
     </Helmet>
