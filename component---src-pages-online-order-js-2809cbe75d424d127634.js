@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{nNfB:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),r=t.n(a),i=t("Bl7J"),l=t("vrFN");e.default=function(){return r.a.createElement(i.a,null,r.a.createElement(l.a,{title:"Online Ordering"}))}}}]);
+//# sourceMappingURL=component---src-pages-online-order-js-2809cbe75d424d127634.js.map
