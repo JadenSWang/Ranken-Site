@@ -1,10 +1,11 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MenuItem from "../components/menuitem.js"
 
-import { Icon } from "react-materialize"
+import { Icon, Row, Col } from "react-materialize"
 
 const CartIcon = ({ numTotalItems, onClick }) => {
   return (
@@ -17,7 +18,7 @@ const CartIcon = ({ numTotalItems, onClick }) => {
           marginLeft: "5vw",
         }}
         onClick={onClick}
-        onKeyDown={{}}
+        onKeyDown={() => {}}
       >
         <Icon medium>local_dining</Icon>
         <div
@@ -44,6 +45,32 @@ const CartIcon = ({ numTotalItems, onClick }) => {
 }
 
 const MenuPage = () => {
+  const images = useStaticQuery(graphql`
+    query {
+      front_menu_image: file(relativePath: { eq: "Front_Menu_Image.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      front_map: file(relativePath: { eq: "ranken_map.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      under_construction: file(relativePath: { eq: "under_construction.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   const [numTotalItems, setItems] = useState(0)
 
   const addItem = () => {
@@ -57,30 +84,50 @@ const MenuPage = () => {
   return (
     <Layout>
       <SEO title="Online Ordering" />
-      <MenuItem
-        title="Ramen #1"
-        price={9.95}
-        addItem={addItem}
-        removeItem={removeItem}
-      />
-      <MenuItem
-        title="Ramen #2"
-        price={9.95}
-        addItem={addItem}
-        removeItem={removeItem}
-      />
-      <MenuItem
-        title="Ramen #3"
-        price={9.95}
-        addItem={addItem}
-        removeItem={removeItem}
-      />
-      <MenuItem
-        title="Ramen #4"
-        price={9.95}
-        addItem={addItem}
-        removeItem={removeItem}
-      />
+      <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
+        <Row>
+          <Col s={4}>
+            <MenuItem
+              key={"1"}
+              title="Ramen #1"
+              price={9.95}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.front_menu_image.childImageSharp.fluid}
+            />
+          </Col>
+          <Col s={4}>
+            <MenuItem
+              key={"2"}
+              title="Ramen #2"
+              price={9.95}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.front_menu_image.childImageSharp.fluid}
+            />
+          </Col>
+          <Col s={4}>
+            <MenuItem
+              key={"3"}
+              title="Ramen #3"
+              price={9.95}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.front_menu_image.childImageSharp.fluid}
+            />
+          </Col>
+          <Col s={4}>
+            <MenuItem
+              key={"4"}
+              title="Ramen #4"
+              price={9.95}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.front_menu_image.childImageSharp.fluid}
+            />
+          </Col>
+        </Row>
+      </div>
 
       {/* cart icons */}
       <CartIcon

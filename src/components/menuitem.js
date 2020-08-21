@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-
 import { Card, Icon } from "react-materialize"
+import Img from "gatsby-image"
 
 const AmountField = ({ marginLeft, amount }) => {
   return (
@@ -51,7 +51,8 @@ const MiniButton = ({ children, color, marginLeft, onClick }) => {
     </>
   )
 }
-const MenuItem = ({ title, price, addItem, removeItem }) => {
+
+const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
   const [amount, setAmount] = useState(0)
 
   const MINUSBUTTON = (
@@ -84,13 +85,15 @@ const MenuItem = ({ title, price, addItem, removeItem }) => {
     <>
       <Card
         title={title}
-        style={{
-          width: "84vw",
-          height: "110px",
-          textSize: "2px",
-          marginLeft: "8vw",
-          color: "#1e6ed7",
-        }}
+        // style={{
+        //   width: "84vw",
+        //   height: "110px",
+        //   textSize: "2px",
+        //   marginLeft: "8vw",
+        //   color: "#1e6ed7",
+        // }}
+        actions={[]}
+        header={<Img fluid={picture}>test</Img>}
       >
         $ {price}
         {amount > 0 ? MINUSBUTTON : null}
