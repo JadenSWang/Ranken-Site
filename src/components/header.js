@@ -1,10 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
 
 import "../css/header.css"
 
 import logo from "../images/ranken_logo.jpg"
+
+const StyledLink = styled(props => <Link {...props} />)`
+  color: black;
+  font-family: Calibri;
+`
 
 const Header = ({ siteTitle }) => (
   <header
@@ -41,47 +47,50 @@ const Header = ({ siteTitle }) => (
       <div
         id="header_Item"
         style={{
-          color: "#fff",
           marginLeft: 20,
           marginRight: 20,
           display: "inline-block",
         }}
       >
-        <Link to="/" activeStyle={{ color: "#ff9900" }}>
+        <StyledLink
+          to="/"
+          className="headerItem"
+          activeStyle={{ color: "#ff9900" }}
+        >
           Home
-        </Link>
+        </StyledLink>
       </div>
       <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
       >
-        <Link to="/menu" activeStyle={{ color: "#ff9900" }}>
+        <StyledLink to="/menu" activeStyle={{ color: "#ff9900" }}>
           Menu
-        </Link>
+        </StyledLink>
       </div>
       <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
       >
-        <Link to="/order" activeStyle={{ color: "#ff9900" }}>
+        <StyledLink to="/order" activeStyle={{ color: "#ff9900" }}>
           Order
-        </Link>
+        </StyledLink>
       </div>
       <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
       >
-        <Link to="/locate" activeStyle={{ color: "#ff9900" }}>
+        <StyledLink to="/locate" activeStyle={{ color: "#ff9900" }}>
           Locate
-        </Link>
+        </StyledLink>
       </div>
       <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
       >
-        <Link to="/contact" activeStyle={{ color: "#ff9900  " }}>
+        <StyledLink to="/contact" activeStyle={{ color: "#ff9900  " }}>
           Contact
-        </Link>
+        </StyledLink>
       </div>
     </div>
     {/* <Hamburger />
