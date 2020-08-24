@@ -57,7 +57,6 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
 
   const MINUSBUTTON = (
     <MiniButton
-      marginLeft="44vw"
       onClick={() => {
         setAmount(amount - 1)
         removeItem()
@@ -67,11 +66,10 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
     </MiniButton>
   )
 
-  const AMOUNTFIELD = <AmountField marginLeft="51vw" amount={amount} />
+  const AMOUNTFIELD = <AmountField amount={amount} />
 
   const PLUSBUTTON = (
     <MiniButton
-      marginLeft="58vw"
       onClick={() => {
         setAmount(amount + 1)
         addItem()
@@ -92,13 +90,14 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
         //   marginLeft: "8vw",
         //   color: "#1e6ed7",
         // }}
-        actions={[]}
+        actions={[
+          amount > 0 ? MINUSBUTTON : <></>,
+          amount > 0 ? AMOUNTFIELD : <></>,
+          PLUSBUTTON,
+        ]}
         header={<Img fluid={picture}>test</Img>}
       >
         $ {price}
-        {amount > 0 ? MINUSBUTTON : null}
-        {amount > 0 ? AMOUNTFIELD : null}
-        {PLUSBUTTON}
       </Card>
     </>
   )

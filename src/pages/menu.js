@@ -116,16 +116,6 @@ const MenuPage = () => {
               picture={images.front_menu_image.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
-            <MenuItem
-              key={"4"}
-              title="Ramen #4"
-              price={9.95}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.front_menu_image.childImageSharp.fluid}
-            />
-          </Col>
         </Row>
       </div>
 

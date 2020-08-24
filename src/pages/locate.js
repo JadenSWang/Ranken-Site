@@ -14,8 +14,10 @@ import SEO from "../components/seo"
 const MapComponent = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={15}
-      defaultCenter={{ lat: 39.1222947, lng: -77.234276 }}
+      defaultZoom={17}
+      defaultCenter={{ lat: 39.1223598, lng: -77.2344795 }}
+      defaultTilt={0}
+      mapTypeId="satellite"
     >
       <Marker position={{ lat: 39.1223598, lng: -77.2344795 }} />
     </GoogleMap>

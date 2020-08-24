@@ -68,14 +68,14 @@ const Header = ({ siteTitle }) => (
           Menu
         </StyledLink>
       </div>
-      <div
+      {/* <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
       >
         <StyledLink to="/order" activeStyle={{ color: "#ff9900" }}>
           Order
         </StyledLink>
-      </div>
+      </div> */}
       <div
         id="header_Item"
         style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
