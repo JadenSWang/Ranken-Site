@@ -90,11 +90,13 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
         //   marginLeft: "8vw",
         //   color: "#1e6ed7",
         // }}
-        actions={[
-          amount > 0 ? MINUSBUTTON : <></>,
-          amount > 0 ? AMOUNTFIELD : <></>,
-          PLUSBUTTON,
-        ]}
+        actions={
+          [
+            // amount > 0 ? MINUSBUTTON : <></>,
+            // amount > 0 ? AMOUNTFIELD : <></>,
+            // PLUSBUTTON,
+          ]
+        }
         header={<Img fluid={picture}>test</Img>}
       >
         $ {price}

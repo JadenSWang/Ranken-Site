@@ -47,23 +47,41 @@ const CartIcon = ({ numTotalItems, onClick }) => {
 const MenuPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      front_menu_image: file(relativePath: { eq: "Front_Menu_Image.jpg" }) {
+      ginger_grilled_pork: file(
+        relativePath: { eq: "ginger_grilled_pork.jpg" }
+      ) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      front_map: file(relativePath: { eq: "ranken_map.jpg" }) {
+      teriyaki_chicken: file(relativePath: { eq: "teriyaki_chicken.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      under_construction: file(relativePath: { eq: "under_construction.png" }) {
+      hamburger_steak: file(relativePath: { eq: "hamburger_steak.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tempura_platter: file(relativePath: { eq: "tempura_platter.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      fried_chicken_ponzu: file(
+        relativePath: { eq: "fried_chicken_ponzu.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -89,33 +107,56 @@ const MenuPage = () => {
           <Col s={4}>
             <MenuItem
               key={"1"}
-              title="Ramen #1"
-              price={9.95}
+              title="Ginger Grilled Pork"
+              price={13}
               addItem={addItem}
               removeItem={removeItem}
-              picture={images.front_menu_image.childImageSharp.fluid}
+              picture={images.ginger_grilled_pork.childImageSharp.fluid}
             />
           </Col>
           <Col s={4}>
             <MenuItem
               key={"2"}
-              title="Ramen #2"
-              price={9.95}
+              title="Terriyaki Chicken"
+              price={15}
               addItem={addItem}
               removeItem={removeItem}
-              picture={images.front_menu_image.childImageSharp.fluid}
+              picture={images.teriyaki_chicken.childImageSharp.fluid}
             />
           </Col>
           <Col s={4}>
             <MenuItem
               key={"3"}
-              title="Ramen #3"
-              price={9.95}
+              title="Hamburger Steak"
+              price={18}
               addItem={addItem}
               removeItem={removeItem}
-              picture={images.front_menu_image.childImageSharp.fluid}
+              picture={images.hamburger_steak.childImageSharp.fluid}
             />
           </Col>
+        </Row>
+        <Row>
+          <Col s={4}>
+            <MenuItem
+              key={"4"}
+              title="Fried Chicken Ponzu"
+              price={15}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.fried_chicken_ponzu.childImageSharp.fluid}
+            />
+          </Col>
+          <Col s={4}>
+            <MenuItem
+              key={"5"}
+              title="Tempura Platter"
+              price={18}
+              addItem={addItem}
+              removeItem={removeItem}
+              picture={images.tempura_platter.childImageSharp.fluid}
+            />
+          </Col>
+          <Col s={4}></Col>
         </Row>
       </div>
 
