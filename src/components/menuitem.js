@@ -83,13 +83,6 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
     <>
       <Card
         title={title}
-        // style={{
-        //   width: "84vw",
-        //   height: "110px",
-        //   textSize: "2px",
-        //   marginLeft: "8vw",
-        //   color: "#1e6ed7",
-        // }}
         actions={
           [
             // amount > 0 ? MINUSBUTTON : <></>,

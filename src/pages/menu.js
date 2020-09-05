@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { Card } from "react-materialize"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import MenuItem from "../components/menuitem.js"
 
 import { Icon, Row, Col } from "react-materialize"
 
@@ -47,8 +48,8 @@ const CartIcon = ({ numTotalItems, onClick }) => {
 const MenuPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      ginger_grilled_pork: file(
-        relativePath: { eq: "ginger_grilled_pork.jpg" }
+      hamburger_steak: file(
+        relativePath: { eq: "entrees/a la carte/hamburger_steak.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -56,30 +57,16 @@ const MenuPage = () => {
           }
         }
       }
-      teriyaki_chicken: file(relativePath: { eq: "teriyaki_chicken.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      hamburger_steak: file(relativePath: { eq: "hamburger_steak.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      tempura_platter: file(relativePath: { eq: "tempura_platter.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      fried_chicken_ponzu: file(
-        relativePath: { eq: "fried_chicken_ponzu.jpg" }
+      tempura_udon: file(
+        relativePath: { eq: "noodles/udon/tempura_udon.jpg" }
       ) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -105,70 +92,48 @@ const MenuPage = () => {
       <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
         <Row>
           <Col s={4}>
-            <MenuItem
-              key={"1"}
-              title="Ginger Grilled Pork"
-              price={13}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.ginger_grilled_pork.childImageSharp.fluid}
-            />
+            <Card
+              title={"À La Carte"}
+              header={
+                <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
+              }
+              actions={[<Link to="menu/a-la-carte">View Our Entrees</Link>]}
+            ></Card>
           </Col>
           <Col s={4}>
-            <MenuItem
-              key={"2"}
-              title="Terriyaki Chicken"
-              price={15}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.teriyaki_chicken.childImageSharp.fluid}
-            />
+            <Card
+              title={"Noodles"}
+              header={
+                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              }
+              actions={[<Link to="menu/noodles">Perhaps some noodles?</Link>]}
+            ></Card>
           </Col>
           <Col s={4}>
-            <MenuItem
-              key={"3"}
-              title="Hamburger Steak"
-              price={18}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.hamburger_steak.childImageSharp.fluid}
-            />
+            <Card
+              title={"Bento Boxes"}
+              header={
+                <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
+              }
+              actions={[
+                <Link to="">
+                  Can't go wrong with some old fashioned carryout
+                </Link>,
+              ]}
+            ></Card>
           </Col>
-        </Row>
-        <Row>
-          <Col s={4}>
-            <MenuItem
-              key={"4"}
-              title="Fried Chicken Ponzu"
-              price={15}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.fried_chicken_ponzu.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={4}>
-            <MenuItem
-              key={"5"}
-              title="Tempura Platter"
-              price={18}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.tempura_platter.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={4}></Col>
         </Row>
       </div>
 
       {/* cart icons */}
-      <CartIcon
+      {/* <CartIcon
         numTotalItems={numTotalItems}
         addItem={addItem}
         removeItem={removeItem}
         onClick={() => {
           console.log("test")
         }}
-      />
+      /> */}
     </Layout>
   )
 }
