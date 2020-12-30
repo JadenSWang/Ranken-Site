@@ -302,7 +302,7 @@ const ALaCarte_Menu_Page = () => {
       console.log(images)
 
       return (
-        <Col s={3}>
+        <Col s={12} l={3}>
           <MenuItem
             key={"" + key}
             title={prop.title}

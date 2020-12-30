@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../css/menu.css"
 
 import { Icon, Row, Col } from "react-materialize"
 
@@ -86,12 +87,13 @@ const MenuPage = () => {
     setItems(numTotalItems - 1)
   }
 
+
   return (
     <Layout>
       <SEO title="Online Ordering" />
-      <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
+      <div className="rowStyle">
         <Row>
-          <Col s={4}>
+          <Col s={12} l={4}>
             <Card
               title={"À La Carte"}
               header={
@@ -100,7 +102,7 @@ const MenuPage = () => {
               actions={[<Link to="menu/a-la-carte">View Our Entrees</Link>]}
             ></Card>
           </Col>
-          <Col s={4}>
+          <Col s={12} l={4}>
             <Card
               title={"Noodles"}
               header={
@@ -109,7 +111,7 @@ const MenuPage = () => {
               actions={[<Link to="menu/noodles">Perhaps some noodles?</Link>]}
             ></Card>
           </Col>
-          <Col s={4}>
+          <Col s={12} l={4}>
             <Card
               title={"Bento Boxes"}
               header={

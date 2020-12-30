@@ -24,41 +24,80 @@ const MapComponent = withScriptjs(
   ))
 )
 
+const browserView = (
+  <BrowserView>
+    <Row style={{ width: "80%", marginTop: "5%" }}>
+      <Col s={12} m={4}>
+        <Card
+          header={<></>}
+          actions={[
+            <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Google Maps</a>,
+            // <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Apple Maps</a>,
+          ]}
+        >
+          <h5>Kentlands</h5>
+          <p>
+            133 Commerce Square Pl <br />
+            Gaithersburg, MD 20878 <br />
+            (240) 543-5028
+          </p>
+        </Card>
+      </Col>
+      <Col s={12} m={8}>
+        <Card>
+          <MapComponent
+            isMarkerShown={true}
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7CAuPt-s6HiZoiu4QoMg2fCLlRpbUTqw&callback=initMap"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `500px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+          />
+        </Card>
+      </Col>
+    </Row>
+  </BrowserView>
+)
+
+const mobileView = (
+  <MobileView>
+    <Row style={{ width: "95%", marginTop: "5%" }}>
+      <Col s={12}>
+        <Card
+          header={<></>}
+          actions={[
+            <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Google Maps</a>,
+            // <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Apple Maps</a>,
+          ]}
+        >
+          <h5>Kentlands</h5>
+          <p>
+            133 Commerce Square Pl <br />
+            Gaithersburg, MD 20878 <br />
+            (240) 543-5028
+          </p>
+        </Card>
+      </Col>
+      <Col s={12}>
+        <Card>
+          <MapComponent
+            isMarkerShown={true}
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7CAuPt-s6HiZoiu4QoMg2fCLlRpbUTqw&callback=initMap"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `500px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+          />
+        </Card>
+      </Col>
+    </Row>
+  </MobileView>
+)
+
 const LocatePage = () => {
   return (
     <Layout>
       <SEO title="Store Locator" />
-      <BrowserView>
-        <Row style={{ width: "80%", marginTop: "5%" }}>
-          <Col s={4}>
-            <Card
-              header={<></>}
-              actions={[
-                <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Google Maps</a>,
-                // <a href="https://goo.gl/maps/rjTTEGLesy8dazo87">Apple Maps</a>,
-              ]}
-            >
-              <h5>Kentlands</h5>
-              <p>
-                133 Commerce Square Pl <br />
-                Gaithersburg, MD 20878 <br />
-                (240) 543-5028
-              </p>
-            </Card>
-          </Col>
-          <Col s={8}>
-            <Card>
-              <MapComponent
-                isMarkerShown={true}
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7CAuPt-s6HiZoiu4QoMg2fCLlRpbUTqw&callback=initMap"
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `500px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
-            </Card>
-          </Col>
-        </Row>
-      </BrowserView>
+      {browserView}
+      {mobileView}
     </Layout>
   )
 }

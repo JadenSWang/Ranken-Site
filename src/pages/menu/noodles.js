@@ -88,7 +88,7 @@ const Noodle_Menu_Page = () => {
       <SEO title="Noodles | Online Ordering" />
       <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
         <Row>
-          <Col s={3}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"1"}
               title="Cold Soba (Cold)"
@@ -98,7 +98,7 @@ const Noodle_Menu_Page = () => {
               picture={images.cold_soba.childImageSharp.fluid}
             />
           </Col>
-          <Col s={3}>
+          <Col  s={12} l={3}>
             <MenuItem
               key={"2"}
               title="Zaru-Soba (Cold)"
@@ -108,7 +108,7 @@ const Noodle_Menu_Page = () => {
               picture={images.zaru_soba.childImageSharp.fluid}
             />
           </Col>
-          <Col s={3}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"4"}
               title="Beef Soba (Hot or Cold)"
@@ -118,7 +118,7 @@ const Noodle_Menu_Page = () => {
               picture={images.cold_soba.childImageSharp.fluid}
             />
           </Col>
-          <Col s={3}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"3"}
               title="Tempura Soba (Hot or Cold)"
@@ -128,7 +128,7 @@ const Noodle_Menu_Page = () => {
               picture={images.tempura_soba.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"5"}
               title="Cold Udon (Cold)"
@@ -138,7 +138,7 @@ const Noodle_Menu_Page = () => {
               picture={images.cold_udon.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"6"}
               title="Curry Udon (Hot)"
@@ -148,7 +148,7 @@ const Noodle_Menu_Page = () => {
               picture={images.curry_udon.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"7"}
               title="Tempura Udon (Hot or Cold)"
@@ -158,7 +158,7 @@ const Noodle_Menu_Page = () => {
               picture={images.tempura_udon.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"8"}
               title="Beef Udon (Hot or Cold)"
@@ -168,7 +168,7 @@ const Noodle_Menu_Page = () => {
               picture={images.beef_udon.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"9"}
               title="Tempura Inaniwa Udon (Hot)"
@@ -178,7 +178,7 @@ const Noodle_Menu_Page = () => {
               picture={images.tempura_udon.childImageSharp.fluid}
             />
           </Col>
-          <Col s={4}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"10"}
               title="Beef Inaniwa Udon(Hot)"

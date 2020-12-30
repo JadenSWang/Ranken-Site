@@ -35,6 +35,41 @@ const IndexPage = () => {
     }
   `)
 
+  const mobileView = (
+    <MobileView>
+      <Layout>
+        <Section
+          title="Dine In"
+          subtitle="Authentic ramen. Simmered to perfection."
+          body=""
+          to="menu"
+          color="#0F0F0F"
+          textColor="white"
+          label="Menu"
+        />
+        <Section
+          title="Carry Out"
+          subtitle="Zero fees. Skips the line. Saves time."
+          body=""
+          color="white"
+          textColor="#050505"
+          label="Order Now"
+        />
+        <Section
+          title="Locate"
+          subtitle="Find some Ramen Near You!"
+          body=""
+          to="locate"
+          color="#404040"
+          textColor="white"
+          label="Find some Ramen Near You!"
+        />
+        <br />
+        <div style={{ color: "white" }}>ADDDRESSSS</div>
+      </Layout>
+    </MobileView>
+  )
+
   return (
     <>
       <SEO title="Home" />
@@ -86,37 +121,7 @@ const IndexPage = () => {
           </Row>
         </Layout>
       </BrowserView>
-      <MobileView>
-        <Layout>
-          <Section
-            title="Dine In"
-            subtitle="Authentic ramen. Simmered to perfection."
-            body=""
-            to="menu"
-            color="#0F0F0F"
-            textColor="white"
-            label="Menu"
-          />
-          <Section
-            title="Carry Out"
-            subtitle="Zero fees. Skips the line. Saves time."
-            body=""
-            color="white"
-            textColor="#050505"
-            label="Order Now"
-          />
-          <Section
-            title="Delivery"
-            subtitle="Enjoy ramen from the comforts of home, "
-            body=""
-            color="#404040"
-            textColor="white"
-            label="Order Now"
-          />
-          <br />
-          <div style={{ color: "white" }}>ADDDRESSSS</div>
-        </Layout>
-      </MobileView>
+      {mobileView}
     </>
   )
 }
