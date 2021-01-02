@@ -4,8 +4,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import MenuItem from "../../components/menuitem.js"
+import "../../css/menu.css"
 
-import { Icon, Row, Col } from "react-materialize"
+import { Row, Col } from "react-materialize"
 
 const data = [
   {
@@ -330,7 +331,7 @@ const ALaCarte_Menu_Page = () => {
   return (
     <Layout>
       <SEO title="À La Carte | Online Ordering" />
-      <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
+      <div className="itemRow" >
         <Row>{buildItems()}</Row>
       </div>
     </Layout>

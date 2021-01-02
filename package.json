@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jaden Wang <connect@jadenswang.com>",
   "dependencies": {
     "auth0-contact-form": "^2.0.18",
     "bootstrap": "^3.4.1",

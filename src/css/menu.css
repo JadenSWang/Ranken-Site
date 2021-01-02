@@ -1,5 +1,12 @@
-.rowStyle {
-  margin-top: "4%";
-  margin-left: "10%";
-  width: "80%";
+.itemRow {
+  margin-top: 4%;
+  margin-left: 10%;
+  width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .itemRow {
+    margin-left: 5%;
+    width: 90%;
+  }
 }

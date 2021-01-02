@@ -111,7 +111,7 @@ const MenuPage = () => {
               actions={[<Link to="menu/noodles">Perhaps some noodles?</Link>]}
             ></Card>
           </Col>
-          <Col s={12} l={4}>
+          {/* <Col s={12} l={4}>
             <Card
               title={"Bento Boxes"}
               header={
@@ -123,7 +123,7 @@ const MenuPage = () => {
                 </Link>,
               ]}
             ></Card>
-          </Col>
+          </Col> */}
         </Row>
       </div>
 

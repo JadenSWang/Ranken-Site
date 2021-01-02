@@ -98,7 +98,7 @@ const Noodle_Menu_Page = () => {
               picture={images.cold_soba.childImageSharp.fluid}
             />
           </Col>
-          <Col  s={12} l={3}>
+          <Col s={12} l={3}>
             <MenuItem
               key={"2"}
               title="Zaru-Soba (Cold)"
