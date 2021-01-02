@@ -4,20 +4,137 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import MenuItem from "../../components/menuitem.js"
+import "../../css/menu.css"
 
-import { Icon, Row, Col } from "react-materialize"
+import { Row, Col } from "react-materialize"
 
 const data = [
   {
-    title: "Steamed Soybeans",
-    price: 5,
+    title: "Chilled Chuka Noodles",
+    price: 13,
+  },
+  {
+    title: "Kaisen Ramen",
+    price: 18,
+  },
+  {
+    title: "Shio Ramen",
+    price: 12.5,
+  },
+  {
+    title: "Shoyu Ramen",
+    price: 13,
+  },
+  {
+    title: "Super Spicy Ramen",
+    price: 13,
+  },
+  {
+    title: "Tsukemen Ramen",
+    price: 18,
+  },
+  {
+    title: "Zaru Soba",
+    price: 13,
+  },
+  {
+    title: "Tempura Soba",
+    price: 16,
+  },
+  {
+    title: "Beef Soba",
+    price: 16,
+  },
+  {
+    title: "Cold Soba",
+    price: 13.5 ,
+  },
+  {
+    title: "Beef Udon",
+    price: 15 ,
+  },
+  {
+    title: "Curry Udon",
+    price: 15 ,
+  },
+  {
+    title: "Tempura Udon",
+    price: 15 ,
+  },
+  {
+    title: "Cold Udon",
+    price: 12 ,
+  },
+  {
+    title: "Tempura Inaniwa Udon",
+    price: 25 ,
+  },
+  {
+    title: "Beef Inaniwa Udon",
+    price: 25 ,
   },
 ]
 
 const Noodle_Menu_Page = () => {
   const images = useStaticQuery(graphql`
     query {
-      cold_soba: file(relativePath: { eq: "noodles/soba/cold_soba.jpg" }) {
+      chilled_chuka_noodles: file(relativePath: { eq: "noodles/ramen/chilled_chuka_noodle.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      kaisen_ramen: file(relativePath: { eq: "noodles/ramen/kaisen_ramen.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      super_spicy_ramen: file(relativePath: { eq: "noodles/ramen/super_spicy_ramen.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tsukemen_ramen: file(relativePath: { eq: "noodles/ramen/tsukemen_ramen.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      shoyu_ramen: file(relativePath: { eq: "noodles/ramen/shoyu_ramen.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      shio_ramen: file(relativePath: { eq: "noodles/ramen/shio_ramen.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beef_soba: file(relativePath: { eq: "noodles/soba/beef_soba.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cold_soba: file(relativePath: { eq: "noodles/soba/cold_soba.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tempura_soba: file(relativePath: { eq: "noodles/soba/tempura_soba.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -31,39 +148,42 @@ const Noodle_Menu_Page = () => {
           }
         }
       }
-      tempura_soba: file(
-        relativePath: { eq: "noodles/soba/tempura_soba.png" }
-      ) {
+      beef_udon: file(relativePath: { eq: "noodles/udon/beef_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.jpg" }) {
+      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      curry_udon: file(relativePath: { eq: "noodles/udon/curry_udon.jpg" }) {
+      curry_udon: file(relativePath: { eq: "noodles/udon/curry_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      beef_udon: file(relativePath: { eq: "noodles/udon/beef_udon.jpg" }) {
+      tempura_udon: file(relativePath: { eq: "noodles/udon/tempura_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      tempura_udon: file(
-        relativePath: { eq: "noodles/udon/tempura_udon.jpg" }
-      ) {
+      tempura_inaniwa_udon: file(relativePath: { eq: "noodles/udon/tempura_inaniwa_udon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beef_inaniwa_udon: file(relativePath: { eq: "noodles/udon/beef_inaniwa_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -83,111 +203,42 @@ const Noodle_Menu_Page = () => {
     setItems(numTotalItems - 1)
   }
 
+  const buildItems = () => {
+    const buildItem = function (key, prop) {
+      console.log(prop.title.toLowerCase().replace(/ /g, "_"))
+      console.log(images)
+
+      return (
+        <Col s={12} l={3}>
+          <MenuItem
+            key={"" + key}
+            title={prop.title}
+            price={prop.price}
+            addItem={addItem}
+            removeItem={removeItem}
+            picture={
+              images[prop.title.toLowerCase().replace(/ /g, "_")]
+                .childImageSharp.fluid
+            }
+          />
+        </Col>
+      )
+    }
+
+    const toReturn = []
+
+    for (let i = 0; i < data.length; i++) {
+      toReturn.push(buildItem(i, data[i]))
+    }
+
+    return toReturn
+  }
+
   return (
     <Layout>
       <SEO title="Noodles | Online Ordering" />
-      <div style={{ marginTop: "4%", marginLeft: "10%", width: "80%" }}>
-        <Row>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"1"}
-              title="Cold Soba (Cold)"
-              price={13.5}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.cold_soba.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"2"}
-              title="Zaru-Soba (Cold)"
-              price={13}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.zaru_soba.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"4"}
-              title="Beef Soba (Hot or Cold)"
-              price={16}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.cold_soba.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"3"}
-              title="Tempura Soba (Hot or Cold)"
-              price={16}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.tempura_soba.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"5"}
-              title="Cold Udon (Cold)"
-              price={12}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.cold_udon.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"6"}
-              title="Curry Udon (Hot)"
-              price={15}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.curry_udon.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"7"}
-              title="Tempura Udon (Hot or Cold)"
-              price={15}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.tempura_udon.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"8"}
-              title="Beef Udon (Hot or Cold)"
-              price={15}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.beef_udon.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"9"}
-              title="Tempura Inaniwa Udon (Hot)"
-              price={25}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.tempura_udon.childImageSharp.fluid}
-            />
-          </Col>
-          <Col s={12} l={3}>
-            <MenuItem
-              key={"10"}
-              title="Beef Inaniwa Udon(Hot)"
-              price={25}
-              addItem={addItem}
-              removeItem={removeItem}
-              picture={images.beef_udon.childImageSharp.fluid}
-            />
-          </Col>
+      <div className="itemRow" >
+        <Row>{buildItems()}
         </Row>
       </div>
     </Layout>

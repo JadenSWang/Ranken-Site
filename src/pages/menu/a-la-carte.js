@@ -10,7 +10,7 @@ import { Row, Col } from "react-materialize"
 
 const data = [
   {
-    title: "Steamed Soybeans",
+    title: "Edamame",
     price: 5,
   },
   {
@@ -66,7 +66,7 @@ const data = [
     price: 15,
   },
   {
-    title: "Cooked Mushroom Rice",
+    title: "Mushroom Fried Rice",
     price: 8,
   },
   {
@@ -98,29 +98,29 @@ const data = [
 const ALaCarte_Menu_Page = () => {
   const images = useStaticQuery(graphql`
     query {
-      steamed_soybeans: file(
-        relativePath: { eq: "entrees/a la carte/steamed_soybeans.jpg" }
+      edamame: file(
+        relativePath: { eq: "entrees/a la carte/edamame.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       potato_salad: file(
-        relativePath: { eq: "entrees/a la carte/potato_salad.jpg" }
+        relativePath: { eq: "entrees/a la carte/potato_salad.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       vegetable_salad: file(
-        relativePath: { eq: "entrees/a la carte/vegetable_salad.jpg" }
+        relativePath: { eq: "entrees/a la carte/vegetable_salad.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -129,7 +129,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/ginger_grilled_pork.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -138,7 +138,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/teriyaki_chicken.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -147,7 +147,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/hamburger_steak.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -156,7 +156,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/grilled_salmon.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -165,7 +165,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/tempura_platter.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -174,7 +174,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/fried_chicken_ponzu.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -183,7 +183,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/bacon_ceasar_salad.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -192,7 +192,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/beef_steak.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -201,37 +201,37 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/a la carte/grilled_sea_bass.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       gyoza: file(relativePath: { eq: "entrees/rice/gyoza.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      fried_rice: file(relativePath: { eq: "entrees/rice/fried_rice.jpg" }) {
+      fried_rice: file(relativePath: { eq: "entrees/rice/fried_rice.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      curry_rice: file(relativePath: { eq: "entrees/rice/curry_rice.jpg" }) {
+      curry_rice: file(relativePath: { eq: "entrees/rice/curry_rice.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      cooked_mushroom_rice: file(
-        relativePath: { eq: "entrees/rice/cooked_mushroom_rice.jpg" }
+      mushroom_fried_rice: file(
+        relativePath: { eq: "entrees/rice/mushroom_fried_rice.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -240,14 +240,14 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/skewers/quail_eggs_and_bacon.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       negima: file(relativePath: { eq: "entrees/skewers/negima.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -256,7 +256,7 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/skewers/enoki_bacon.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -265,21 +265,21 @@ const ALaCarte_Menu_Page = () => {
         relativePath: { eq: "entrees/skewers/shiitake_mushroom.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       shrimp: file(relativePath: { eq: "entrees/skewers/shrimp.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 800) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       thigh: file(relativePath: { eq: "entrees/skewers/thigh.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 750) {
+          fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -303,7 +303,7 @@ const ALaCarte_Menu_Page = () => {
       console.log(images)
 
       return (
-        <Col s={12} l={3}>
+        <Col s={12} l={3} style={{height: "450px"}}>
           <MenuItem
             key={"" + key}
             title={prop.title}

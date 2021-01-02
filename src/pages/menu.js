@@ -59,7 +59,7 @@ const MenuPage = () => {
         }
       }
       tempura_udon: file(
-        relativePath: { eq: "noodles/udon/tempura_udon.jpg" }
+        relativePath: { eq: "noodles/udon/tempura_udon.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -67,7 +67,7 @@ const MenuPage = () => {
           }
         }
       }
-      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.jpg" }) {
+      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -111,7 +111,7 @@ const MenuPage = () => {
               actions={[<Link to="menu/noodles">Perhaps some noodles?</Link>]}
             ></Card>
           </Col>
-          {/* <Col s={12} l={4}>
+          <Col s={12} l={4}>
             <Card
               title={"Bento Boxes"}
               header={
@@ -123,7 +123,7 @@ const MenuPage = () => {
                 </Link>,
               ]}
             ></Card>
-          </Col> */}
+          </Col>
         </Row>
       </div>
 

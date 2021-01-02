@@ -64,8 +64,6 @@ const IndexPage = () => {
           textColor="white"
           label="Find some Ramen Near You!"
         />
-        <br />
-        <div style={{ color: "white" }}>ADDDRESSSS</div>
       </Layout>
     </MobileView>
   )
@@ -94,10 +92,10 @@ const IndexPage = () => {
             <Col s={4}>
               <Card
                 actions={[
-                  <Link to="/" activeStyle={{ color: "#ff9900" }}>
+                  <Link to="/contact" activeStyle={{ color: "#ff9900" }}>
                     Contact
                   </Link>,
-                  <Link to="/" activeStyle={{ color: "#ff9900" }}>
+                  <Link to="/locate" activeStyle={{ color: "#ff9900" }}>
                     Store Locator
                   </Link>,
                 ]}
