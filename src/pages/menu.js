@@ -87,55 +87,69 @@ const MenuPage = () => {
     setItems(numTotalItems - 1)
   }
 
-
   return (
     <Layout>
       <SEO title="Online Ordering" />
       <div className="rowStyle">
-        <Row>
+        <Row style={{ marginTop: "3%" }}>
           <Col s={12} l={4}>
             <Card
-              title={"À La Carte"}
+              title={<Link to="menu/a-la-carte">À La Carte</Link>}
               header={
                 <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
               }
-              actions={[<Link to="menu/a-la-carte">View Our Entrees</Link>]}
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={"Noodles"}
+              title={<Link to="menu/ramen">Ramen</Link>}
               header={
                 <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
               }
-              actions={[<Link to="menu/noodles">Perhaps some noodles?</Link>]}
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={"Bento Boxes"}
+              title={<Link to="menu/udon">Udon</Link>}
+              header={
+                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              }
+            ></Card>
+          </Col>
+          <Col s={12} l={4}>
+            <Card
+              title={<Link to="menu/soba">Soba</Link>}
+              header={
+                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              }
+            ></Card>
+          </Col>
+          <Col s={12} l={4}>
+            <Card
+              title={<Link to="menu/rice">Rice</Link>}
+              header={
+                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              }
+            ></Card>
+          </Col>
+          <Col s={12} l={4}>
+            <Card
+              title={<Link to="menu/skewers">Skewers</Link>}
+              header={
+                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              }
+            ></Card>
+          </Col>
+          <Col s={12} l={4}>
+            <Card
+              title={<Link to="menu/">Bento Boxes</Link>}
               header={
                 <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
               }
-              actions={[
-                <Link to="">
-                  Can't go wrong with some old fashioned carryout
-                </Link>,
-              ]}
             ></Card>
           </Col>
         </Row>
       </div>
-
-      {/* cart icons */}
-      {/* <CartIcon
-        numTotalItems={numTotalItems}
-        addItem={addItem}
-        removeItem={removeItem}
-        onClick={() => {
-          console.log("test")
-        }}
-      /> */}
     </Layout>
   )
 }

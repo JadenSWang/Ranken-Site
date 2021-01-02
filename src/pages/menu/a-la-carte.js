@@ -57,42 +57,6 @@ const data = [
     title: "Beef Steak",
     price: 25,
   },
-  {
-    title: "Fried Rice",
-    price: 12,
-  },
-  {
-    title: "Curry Rice",
-    price: 15,
-  },
-  {
-    title: "Mushroom Fried Rice",
-    price: 8,
-  },
-  {
-    title: "Thigh",
-    price: 3,
-  },
-  {
-    title: "Negima",
-    price: 3,
-  },
-  {
-    title: "Quail Eggs and Bacon",
-    price: 3,
-  },
-  {
-    title: "Enoki Bacon",
-    price: 3,
-  },
-  {
-    title: "Shiitake Mushroom",
-    price: 2.5,
-  },
-  {
-    title: "Shrimp",
-    price: 3,
-  },
 ]
 
 const ALaCarte_Menu_Page = () => {
@@ -206,84 +170,6 @@ const ALaCarte_Menu_Page = () => {
           }
         }
       }
-      gyoza: file(relativePath: { eq: "entrees/rice/gyoza.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      fried_rice: file(relativePath: { eq: "entrees/rice/fried_rice.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      curry_rice: file(relativePath: { eq: "entrees/rice/curry_rice.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mushroom_fried_rice: file(
-        relativePath: { eq: "entrees/rice/mushroom_fried_rice.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      quail_eggs_and_bacon: file(
-        relativePath: { eq: "entrees/skewers/quail_eggs_and_bacon.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      negima: file(relativePath: { eq: "entrees/skewers/negima.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      enoki_bacon: file(
-        relativePath: { eq: "entrees/skewers/enoki_bacon.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      shiitake_mushroom: file(
-        relativePath: { eq: "entrees/skewers/shiitake_mushroom.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      shrimp: file(relativePath: { eq: "entrees/skewers/shrimp.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      thigh: file(relativePath: { eq: "entrees/skewers/thigh.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -299,11 +185,9 @@ const ALaCarte_Menu_Page = () => {
 
   const buildItems = () => {
     const buildItem = function (key, prop) {
-      console.log(prop.title.toLowerCase().replace(/ /g, "_"))
-      console.log(images)
 
       return (
-        <Col s={12} l={3} style={{height: "450px"}}>
+        <Col s={12} l={3}>
           <MenuItem
             key={"" + key}
             title={prop.title}
