@@ -23,7 +23,7 @@ const data = [
   },
   {
     title: "Bacon Ceasar Salad",
-    price: 10,
+    price: 8,
   },
   {
     title: "Tempura Platter",
@@ -31,7 +31,7 @@ const data = [
   },
   {
     title: "Fried Chicken Ponzu",
-    price: 25,
+    price: 15,
   },
   {
     title: "Grilled Salmon",
@@ -57,11 +57,24 @@ const data = [
     title: "Beef Steak",
     price: 25,
   },
+  {
+    title: "Gyoza",
+    price: 6,
+  },
 ]
 
 const ALaCarte_Menu_Page = () => {
   const images = useStaticQuery(graphql`
     query {
+      gyoza: file(
+        relativePath: { eq: "entrees/a la carte/gyoza.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       edamame: file(
         relativePath: { eq: "entrees/a la carte/edamame.jpg" }
       ) {

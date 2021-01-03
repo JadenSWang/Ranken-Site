@@ -58,8 +58,8 @@ const MenuPage = () => {
           }
         }
       }
-      tempura_udon: file(
-        relativePath: { eq: "noodles/udon/tempura_udon.png" }
+      ramen_title: file(
+        relativePath: { eq: "ramen_title.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -67,7 +67,28 @@ const MenuPage = () => {
           }
         }
       }
-      cold_udon: file(relativePath: { eq: "noodles/udon/cold_udon.png" }) {
+      udon_title: file(relativePath: { eq: "udon_title.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      soba_title: file(relativePath: { eq: "soba_title.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      rice_title: file(relativePath: { eq: "rice_title.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, maxHeight: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      skewer_title: file(relativePath: { eq: "skewer_title.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -91,10 +112,14 @@ const MenuPage = () => {
     <Layout>
       <SEO title="Online Ordering" />
       <div className="rowStyle">
-        <Row style={{ marginTop: "3%" }}>
+        <Row style={{ marginTop: "3%", width: "90%", marginLeft: "5%" }}>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/a-la-carte">À La Carte</Link>}
+              title={
+                <Link to="menu/a-la-carte">
+                  <b>À La Carte</b>
+                </Link>
+              }
               header={
                 <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
               }
@@ -102,47 +127,72 @@ const MenuPage = () => {
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/ramen">Ramen</Link>}
+              title={
+                <Link to="menu/ramen">
+                  <b>Ramen</b>
+                </Link>
+              }
               header={
-                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+                <Img fluid={images.ramen_title.childImageSharp.fluid}></Img>
               }
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/udon">Udon</Link>}
+              title={
+                <Link to="menu/udon">
+                  <b>Udon</b>
+                </Link>
+              }
               header={
-                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+                <Img fluid={images.udon_title.childImageSharp.fluid}></Img>
+              }
+            ></Card>
+          </Col>
+          {console.log(images)}
+          <Col s={12} l={4}>
+            <Card
+              title={
+                <Link to="menu/soba">
+                  <b>Soba</b>
+                </Link>
+              }
+              header={
+                <Img fluid={images.soba_title.childImageSharp.fluid}></Img>
               }
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/soba">Soba</Link>}
+              title={
+                <Link to="menu/rice">
+                  <b>Rice</b>
+                </Link>
+              }
               header={
-                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+                <Img fluid={images.rice_title.childImageSharp.fluid}></Img>
               }
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/rice">Rice</Link>}
+              title={
+                <Link to="menu/skewers">
+                  <b>Skewers</b>
+                </Link>
+              }
               header={
-                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+                <Img fluid={images.skewer_title.childImageSharp.fluid}></Img>
               }
             ></Card>
           </Col>
           <Col s={12} l={4}>
             <Card
-              title={<Link to="menu/skewers">Skewers</Link>}
-              header={
-                <Img fluid={images.cold_udon.childImageSharp.fluid}></Img>
+              title={
+                <Link to="menu/">
+                  <b>Bento Boxes</b>
+                </Link>
               }
-            ></Card>
-          </Col>
-          <Col s={12} l={4}>
-            <Card
-              title={<Link to="menu/">Bento Boxes</Link>}
               header={
                 <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
               }

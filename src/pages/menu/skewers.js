@@ -10,7 +10,7 @@ import { Row, Col } from "react-materialize"
 
 const data = [
   {
-    title: "Thigh",
+    title: "Yakitori",
     price: 3,
   },
   {
@@ -39,7 +39,7 @@ const ALaCarte_Menu_Page = () => {
   const images = useStaticQuery(graphql`
     query {
       quail_eggs_and_bacon: file(
-        relativePath: { eq: "entrees/skewers/quail_eggs_and_bacon.png" }
+        relativePath: { eq: "entrees/skewers/quail_eggs_and_bacon.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -47,7 +47,7 @@ const ALaCarte_Menu_Page = () => {
           }
         }
       }
-      negima: file(relativePath: { eq: "entrees/skewers/negima.png" }) {
+      negima: file(relativePath: { eq: "entrees/skewers/negima.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -55,7 +55,7 @@ const ALaCarte_Menu_Page = () => {
         }
       }
       enoki_bacon: file(
-        relativePath: { eq: "entrees/skewers/enoki_bacon.png" }
+        relativePath: { eq: "entrees/skewers/enoki_bacon.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -64,7 +64,7 @@ const ALaCarte_Menu_Page = () => {
         }
       }
       shiitake_mushroom: file(
-        relativePath: { eq: "entrees/skewers/shiitake_mushroom.png" }
+        relativePath: { eq: "entrees/skewers/shiitake_mushroom.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
@@ -72,14 +72,14 @@ const ALaCarte_Menu_Page = () => {
           }
         }
       }
-      shrimp: file(relativePath: { eq: "entrees/skewers/shrimp.png" }) {
+      shrimp: file(relativePath: { eq: "entrees/skewers/shrimp.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      thigh: file(relativePath: { eq: "entrees/skewers/thigh.png" }) {
+      yakitori: file(relativePath: { eq: "entrees/skewers/yakitori.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -101,6 +101,7 @@ const ALaCarte_Menu_Page = () => {
 
   const buildItems = () => {
     const buildItem = function (key, prop) {
+      console.log(images)
 
       return (
         <Col s={12} l={3} style={{height: "450px"}}>

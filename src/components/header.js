@@ -39,7 +39,7 @@ const browserView = (
 
       <div
         style={{
-          fontSize: 22,
+          fontSize: 25,
           width: "50%",
           marginLeft: "25%",
           marginTop: 15,

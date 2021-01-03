@@ -11,7 +11,7 @@ import Img from "gatsby-image"
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      front_menu_image: file(relativePath: { eq: "Front_Menu_Image.jpg" }) {
+      front_menu_image: file(relativePath: { eq: "main_page.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -75,13 +75,33 @@ const IndexPage = () => {
         <Layout>
           <Row style={{ width: "80%", marginTop: "5%" }}>
             <Col s={4}>
+              <Link to="/menu">
+                <Card
+                  header={
+                    <div
+                      style={{
+                        paddingTop: "7%",
+                        paddingLeft: "5%",
+                        width: "90%",
+                        fontSize: "1.75em",
+                      }}
+                    >
+                      Carry Out
+                    </div>
+                  }
+                  actions={[
+                    <Link to="/menu" activeStyle={{ color: "#ff9900" }}>
+                      Order Now
+                    </Link>,
+                  ]}
+                />
+              </Link>
+            </Col>
+            <Col s={4}>
               <Card
                 actions={[
                   <Link to="/menu" activeStyle={{ color: "#ff9900" }}>
                     Menu
-                  </Link>,
-                  <Link to="/" activeStyle={{ color: "#ff9900" }}>
-                    Order Online
                   </Link>,
                 ]}
                 header={
@@ -90,31 +110,30 @@ const IndexPage = () => {
               ></Card>
             </Col>
             <Col s={4}>
-              <Card
-                actions={[
-                  <Link to="/contact" activeStyle={{ color: "#ff9900" }}>
-                    Contact
-                  </Link>,
-                  <Link to="/locate" activeStyle={{ color: "#ff9900" }}>
-                    Store Locator
-                  </Link>,
-                ]}
-                header={<Img fluid={images.front_map.childImageSharp.fluid} />}
-              ></Card>
-            </Col>
-            <Col s={4}>
-              <Card
-                actions={[
-                  <Link to="/" activeStyle={{ color: "#ff9900" }}>
-                    News
-                  </Link>,
-                ]}
-                header={
-                  <Img
-                    fluid={images.under_construction.childImageSharp.fluid}
-                  />
-                }
-              ></Card>
+              <Link to="">
+                <Card
+                  header={
+                    <div
+                      style={{
+                        paddingTop: "7%",
+                        paddingLeft: "5%",
+                        width: "90%",
+                        fontSize: "1.75em",
+                      }}
+                    >
+                      Deliver
+                    </div>
+                  }
+                  actions={[
+                    <a href="https://www.grubhub.com" activeStyle={{ color: "#ff9900" }}>
+                      GrubHub
+                    </a>,
+                    <a href="https://www.doordash.com" activeStyle={{ color: "#ff9900" }}>
+                      DoorDash
+                    </a>,
+                  ]}
+                />
+              </Link>
             </Col>
           </Row>
         </Layout>
