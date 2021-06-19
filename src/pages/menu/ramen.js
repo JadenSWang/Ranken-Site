@@ -11,11 +11,11 @@ import { Row, Col } from "react-materialize"
 const data = [
   {
     title: "Tonkotsu Ramen",
-    price: 13,
+    price: 13.5,
   },
   {
     title: "Miso Ramen",
-    price: 13.5,
+    price: 14.5,
   },
   {
     title: "Tomato Ramen",
@@ -140,7 +140,6 @@ const Noodle_Menu_Page = () => {
 
   const buildItems = () => {
     const buildItem = function (key, prop) {
-
       return (
         <>
           <Col s={12} l={3}>
