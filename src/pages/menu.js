@@ -58,9 +58,7 @@ const MenuPage = () => {
           }
         }
       }
-      ramen_title: file(
-        relativePath: { eq: "ramen_title.jpg" }
-      ) {
+      ramen_title: file(relativePath: { eq: "ramen_title.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
