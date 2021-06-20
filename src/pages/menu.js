@@ -58,9 +58,7 @@ const MenuPage = () => {
           }
         }
       }
-      ramen_title: file(
-        relativePath: { eq: "ramen_title.jpg" }
-      ) {
+      ramen_title: file(relativePath: { eq: "ramen_title.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -186,7 +184,7 @@ const MenuPage = () => {
               }
             ></Card>
           </Col>
-          <Col s={12} l={4}>
+          {/* <Col s={12} l={4}>
             <Card
               title={
                 <Link to="menu/">
@@ -197,7 +195,7 @@ const MenuPage = () => {
                 <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
               }
             ></Card>
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </Layout>
