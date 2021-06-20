@@ -101,7 +101,6 @@ const Noodle_Menu_Page = () => {
 
   const buildItems = () => {
     const buildItem = function (key, prop) {
-
       return (
         <>
           <Col s={12} l={3}>

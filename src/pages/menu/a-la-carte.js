@@ -15,7 +15,7 @@ const data = [
   },
   {
     title: "Vegetable Salad",
-    price: 8,
+    price: 7,
   },
   {
     title: "Potato Salad",
@@ -23,11 +23,11 @@ const data = [
   },
   {
     title: "Bacon Ceasar Salad",
-    price: 8,
+    price: 10,
   },
   {
     title: "Tempura Platter",
-    price: 18,
+    price: 20,
   },
   {
     title: "Fried Chicken Ponzu",
@@ -66,18 +66,14 @@ const data = [
 const ALaCarte_Menu_Page = () => {
   const images = useStaticQuery(graphql`
     query {
-      gyoza: file(
-        relativePath: { eq: "entrees/a la carte/gyoza.png" }
-      ) {
+      gyoza: file(relativePath: { eq: "entrees/a la carte/gyoza.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      edamame: file(
-        relativePath: { eq: "entrees/a la carte/edamame.jpg" }
-      ) {
+      edamame: file(relativePath: { eq: "entrees/a la carte/edamame.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000, maxHeight: 650) {
             ...GatsbyImageSharpFluid
@@ -198,7 +194,6 @@ const ALaCarte_Menu_Page = () => {
 
   const buildItems = () => {
     const buildItem = function (key, prop) {
-
       return (
         <Col s={12} l={3}>
           <MenuItem
@@ -228,7 +223,7 @@ const ALaCarte_Menu_Page = () => {
   return (
     <Layout>
       <SEO title="À La Carte | Online Ordering" />
-      <div className="itemRow" >
+      <div className="itemRow">
         <Row>{buildItems()}</Row>
       </div>
     </Layout>

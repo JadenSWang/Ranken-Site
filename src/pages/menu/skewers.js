@@ -104,7 +104,7 @@ const ALaCarte_Menu_Page = () => {
       console.log(images)
 
       return (
-        <Col s={12} l={3} style={{height: "450px"}}>
+        <Col s={12} l={3} style={{ height: "450px" }}>
           <MenuItem
             key={"" + key}
             title={prop.title}
@@ -132,7 +132,7 @@ const ALaCarte_Menu_Page = () => {
   return (
     <Layout>
       <SEO title="À La Carte | Online Ordering" />
-      <div className="itemRow" >
+      <div className="itemRow">
         <Row>{buildItems()}</Row>
       </div>
     </Layout>
