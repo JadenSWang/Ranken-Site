@@ -52,6 +52,7 @@ const IndexPage = () => {
           subtitle="Zero fees. Skips the line. Saves time."
           body=""
           color="white"
+          link="http://www.mealage.com/m.jsp?id=8155"
           textColor="#050505"
           label="Order Now"
         />
@@ -90,7 +91,10 @@ const IndexPage = () => {
                     </div>
                   }
                   actions={[
-                    <Link to="/menu" activeStyle={{ color: "#ff9900" }}>
+                    <Link
+                      to="http://www.mealage.com/m.jsp?id=8155"
+                      activeStyle={{ color: "#ff9900" }}
+                    >
                       Order Now
                     </Link>,
                   ]}
@@ -125,10 +129,16 @@ const IndexPage = () => {
                     </div>
                   }
                   actions={[
-                    <a href="https://www.grubhub.com" activeStyle={{ color: "#ff9900" }}>
+                    <a
+                      href="https://www.grubhub.com"
+                      activeStyle={{ color: "#ff9900" }}
+                    >
                       GrubHub
                     </a>,
-                    <a href="https://www.doordash.com" activeStyle={{ color: "#ff9900" }}>
+                    <a
+                      href="https://www.doordash.com"
+                      activeStyle={{ color: "#ff9900" }}
+                    >
                       DoorDash
                     </a>,
                   ]}

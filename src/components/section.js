@@ -4,36 +4,63 @@ import { Link } from "gatsby"
 
 import { Card } from "react-materialize"
 
-const Section = ({ title, color, textColor, to, label }) => {
+const Section = ({ title, color, textColor, to, label, link }) => {
   return (
-    <Link
-      to={to}
-      style={{
-        textDecoration: `none`,
-        fontSize: "15px",
-      }}
-    >
-      <Card
-        title={title}
-        style={{
-          width: "84vw",
-          height: "110px",
-          marginLeft: "8vw",
-          marginTop: "2vh",
-          textAlign: "center",
-        }}
-      >
+    <>
+      {to ? (
         <Link
           to={to}
           style={{
             textDecoration: `none`,
-            color: "#1e6ed7",
+            fontSize: "15px",
           }}
         >
-          {label}
+          <Card
+            title={title}
+            style={{
+              width: "84vw",
+              height: "110px",
+              marginLeft: "8vw",
+              marginTop: "2vh",
+              textAlign: "center",
+            }}
+          >
+            <Link
+              to={to}
+              style={{
+                textDecoration: `none`,
+                color: "#1e6ed7",
+              }}
+            >
+              {label}
+            </Link>
+          </Card>
         </Link>
-      </Card>
-    </Link>
+      ) : (
+        <a href="http://www.mealage.com/m.jsp?id=8155">
+          <Card
+            title={title}
+            style={{
+              width: "84vw",
+              height: "110px",
+              marginLeft: "8vw",
+              marginTop: "2vh",
+              textAlign: "center",
+            }}
+          >
+            <Link
+              to={to}
+              style={{
+                textDecoration: `none`,
+                color: "#1e6ed7",
+              }}
+            >
+              {label}
+            </Link>
+          </Card>
+        </a>
+      )}
+    </>
   )
 }
 
