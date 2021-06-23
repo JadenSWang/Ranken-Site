@@ -117,7 +117,10 @@ const IndexPage = () => {
                   }}
                 >
                   <Button
-                    href="http://www.mealage.com/m.jsp?id=8155"
+                    onClick={() => {
+                      window.location.href =
+                        "http://www.mealage.com/m.jsp?id=8155"
+                    }}
                     style={{
                       borderWidth: 10,
                       textAlign: "center",
