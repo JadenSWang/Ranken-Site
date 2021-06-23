@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from "../components/seo"
 import { BrowserView, MobileView } from "react-device-detect"
-import { Card, Row, Col } from "react-materialize"
+import { Card, Row, Col, Button } from "react-materialize"
 import Img from "gatsby-image"
 
 const IndexPage = () => {
@@ -75,32 +75,7 @@ const IndexPage = () => {
       <BrowserView>
         <Layout>
           <Row style={{ width: "80%", marginTop: "5%" }}>
-            <Col s={4}>
-              <Link to="/menu">
-                <Card
-                  header={
-                    <div
-                      style={{
-                        paddingTop: "7%",
-                        paddingLeft: "5%",
-                        width: "90%",
-                        fontSize: "1.75em",
-                      }}
-                    >
-                      Carry Out
-                    </div>
-                  }
-                  actions={[
-                    <Link
-                      to="http://www.mealage.com/m.jsp?id=8155"
-                      activeStyle={{ color: "#ff9900" }}
-                    >
-                      Order Now
-                    </Link>,
-                  ]}
-                />
-              </Link>
-            </Col>
+            <Col s={2} />
             <Col s={4}>
               <Card
                 actions={[
@@ -114,37 +89,62 @@ const IndexPage = () => {
               ></Card>
             </Col>
             <Col s={4}>
-              <Link to="">
-                <Card
-                  header={
-                    <div
-                      style={{
-                        paddingTop: "7%",
-                        paddingLeft: "5%",
-                        width: "90%",
-                        fontSize: "1.75em",
-                      }}
-                    >
-                      Deliver
-                    </div>
-                  }
-                  actions={[
-                    <a
-                      href="https://www.grubhub.com"
-                      activeStyle={{ color: "#ff9900" }}
-                    >
-                      GrubHub
-                    </a>,
-                    <a
-                      href="https://www.doordash.com"
-                      activeStyle={{ color: "#ff9900" }}
-                    >
-                      DoorDash
-                    </a>,
-                  ]}
-                />
-              </Link>
+              <div
+                style={{
+                  height: "50%",
+                  marginTop: "20%",
+                  paddingTop: 150,
+                  paddingBottom: 200,
+                  width: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "calibri",
+                    fontSize: "2em",
+                    width: "88%",
+                    marginLeft: "6%",
+                    marginBottom: 50,
+                  }}
+                >
+                  Authentic Japenese Cuisine you'll fall in love with.
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "col",
+                  }}
+                >
+                  <Button
+                    href=""
+                    style={{
+                      borderWidth: 10,
+                      textAlign: "center",
+                      borderWidth: 10,
+                      width: 200,
+                      backgroundColor: "orange",
+                      marginRight: 20,
+                    }}
+                  >
+                    CARRY OUT
+                  </Button>
+                  <Button
+                    href=""
+                    style={{
+                      borderWidth: 10,
+                      textAlign: "center",
+                      backgroundColor: "orange",
+                      borderWidth: 10,
+                      width: 200,
+                    }}
+                  >
+                    DELIVER (unavailable)
+                  </Button>
+                </div>
+              </div>
             </Col>
+            <Col s={2} />
           </Row>
         </Layout>
       </BrowserView>
