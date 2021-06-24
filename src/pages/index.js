@@ -52,7 +52,7 @@ const IndexPage = () => {
           subtitle="Zero fees. Skips the line. Saves time."
           body=""
           color="white"
-          link="http://www.mealage.com/m.jsp?id=8155"
+          link="https://www.mealage.com/m.jsp?id=8155"
           textColor="#050505"
           label="Order Now"
         />
@@ -119,7 +119,7 @@ const IndexPage = () => {
                   <Button
                     onClick={() => {
                       window.location.href =
-                        "http://www.mealage.com/m.jsp?id=8155"
+                        "https://www.mealage.com/m.jsp?id=8155"
                     }}
                     style={{
                       borderWidth: 10,
