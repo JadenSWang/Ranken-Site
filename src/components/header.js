@@ -2,135 +2,40 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { BrowserView, MobileView } from "react-device-detect"
-
-import "../css/header.css"
 
 import logo from "../images/ranken_logo.jpg"
 
-const StyledLink = styled(props => <Link {...props} />)`
-  color: black;
-  font-family: Calibri;
-`
+export default ({}) => {
+  const image = fetch(
+    "https://cms.jadenswang.com/assets/155e9559-b9fd-4d6c-a560-cc291c4fcde1"
+  )
 
-const browserView = (
-  <BrowserView>
-    <header
-      style={{
-        background: `inherit`,
-        width: "100vw",
-        height: "46px",
-        opacity: "0.96",
-        position: "fixed",
-        zIndex: "100",
-      }}
-    >
-      <Link to="/">
-        <img
-          src={logo}
-          style={{
-            position: "absolute",
-            width: 100,
-            marginLeft: 10,
-            marginTop: 10,
-          }}
-        ></img>
-      </Link>
+  const Bar = styled.div`
+    background-color: green;
+    height: 80px;
 
-      <div
-        style={{
-          fontSize: 25,
-          width: "50%",
-          marginLeft: "25%",
-          marginTop: 15,
-          textAlign: "center",
-        }}
-      >
-        <div
-          id="header_Item"
-          style={{
-            marginLeft: 20,
-            marginRight: 20,
-            display: "inline-block",
-          }}
-        >
-          <StyledLink
-            to="/"
-            className="headerItem"
-            activeStyle={{ color: "#ff9900" }}
-          >
-            Home
-          </StyledLink>
-        </div>
-        <div
-          id="header_Item"
-          style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
-        >
-          <StyledLink to="/menu" activeStyle={{ color: "#ff9900" }}>
-            Menu
-          </StyledLink>
-        </div>
-        <div
-          id="header_Item"
-          style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
-        >
-          <StyledLink to="/locate" activeStyle={{ color: "#ff9900" }}>
-            Locate
-          </StyledLink>
-        </div>
-        <div
-          id="header_Item"
-          style={{ marginLeft: 20, marginRight: 20, display: "inline-block" }}
-        >
-          <StyledLink to="/contact" activeStyle={{ color: "#ff9900  " }}>
-            Contact
-          </StyledLink>
-        </div>
-      </div>
-    </header>
-  </BrowserView>
-)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  `
 
-const mobileView = (
-  <MobileView>
-    <header
-      style={{
-        background: `inherit`,
-        width: "100vw",
-        height: "46px",
-        opacity: "0.96",
-        position: "fixed",
-        zIndex: "100",
-      }}
-    >
-    <Link to="/">
-      <img
-        src={logo}
-        style={{
-          position: "absolute",
-          width: 35,
-          marginLeft: 10,
-          marginTop: 10,
-        }}
-      ></img>
-    </Link>
-    </header>
-  </MobileView>
-)
+  const NavItem = styled.div`
+    display: flex;
 
-const Header = ({ siteTitle }) => (
-  <>
-    {browserView}
-    {mobileView}
-  </>
-)
+    background-color: blue;
+  `
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  const NavImage = styled.img``
+
+  return (
+    <>
+      <Bar>
+        <NavImage src="https://cms.jadenswang.com/assets/155e9559-b9fd-4d6c-a560-cc291c4fcde1/?=&width=80&height=80" />
+        <NavItem>ABOUT US</NavItem>
+        <NavItem>MENU</NavItem>
+        <NavItem>LOCATIONS</NavItem>
+        <NavItem>CONTACT US</NavItem>
+      </Bar>
+    </>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

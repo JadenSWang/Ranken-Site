@@ -90,7 +90,14 @@ const MenuItem = ({ title, price, addItem, removeItem, picture }) => {
             // PLUSBUTTON,
           ]
         }
-        header={<Img imgStyle={{alignItems: "center", justifyContent: "center"}}  fluid={picture}>test</Img>}
+        header={
+          <Img
+            imgStyle={{ alignItems: "center", justifyContent: "center" }}
+            fluid={picture}
+          >
+            test
+          </Img>
+        }
       >
         $ {price}
       </Card>
