@@ -9,6 +9,7 @@
     "bootstrap": "^3.4.1",
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.5",
     "gatsby-plugin-offline": "^3.2.3",
     "gatsby-plugin-react-helmet": "^3.3.1",
@@ -28,6 +29,7 @@
     "react-helmet": "^6.0.0",
     "react-materialize": "^3.9.2",
     "react-responsive": "^8.1.0",
+    "react-responsive-carousel": "^3.2.18",
     "react-simple-contact-form": "0.0.1",
     "styled-components": "^5.1.1"
   },
