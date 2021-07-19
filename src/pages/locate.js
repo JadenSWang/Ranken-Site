@@ -41,6 +41,23 @@ const browserView = (
             Gaithersburg, MD 20878 <br />
             (240) 800-1077
           </p>
+          <p>
+            <br />
+            Mon: 11:30 AM - 8:30 PM
+            <br />
+            Tue: Closed
+            <br />
+            Wed: 11:30 AM - 8:30 PM
+            <br />
+            Thr: 11:30 AM - 8:30 PM
+            <br />
+            Fri: 11:30 AM - 8:30 PM
+            <br />
+            Sat: 11:30 AM - 8:30 PM
+            <br />
+            Sun: 11:30 AM - 8:30 PM
+            <br />
+          </p>
         </Card>
       </Col>
       <Col s={12} m={8}>
