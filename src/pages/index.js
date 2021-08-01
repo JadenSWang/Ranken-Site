@@ -166,6 +166,25 @@ const IndexPage = () => {
                     DELIVER (unavailable)
                   </Button>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "col",
+                    marginTop: 40,
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "calibri",
+                      fontSize: "1.2em",
+                      marginLeft: "6%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Chef Li's Message: "{motd}"
+                  </div>
+                </div>
               </div>
             </Col>
             <Col s={2} />
