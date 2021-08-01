@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -35,9 +35,30 @@ const IndexPage = () => {
     }
   `)
 
+  const [motd, setMotd] = useState("")
+
+  useEffect(() => {
+    fetch("https://cms.jadenswang.com/items/rnh_meta")
+      .then(data => data.json())
+      .then(data => {
+        setMotd(data["data"]["motd"])
+      })
+  }, [])
+
   const mobileView = (
     <MobileView>
       <Layout>
+        <Card
+          title={motd}
+          style={{
+            width: "84vw",
+            marginLeft: "8vw",
+            marginTop: "2vh",
+            textAlign: "center",
+            color: "#039be5",
+            fontSize: 10,
+          }}
+        ></Card>
         <Section
           title="Dine In"
           subtitle="Authentic ramen. Simmered to perfection."
