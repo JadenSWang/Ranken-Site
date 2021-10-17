@@ -11,11 +11,11 @@ import { Row, Col } from "react-materialize"
 const data = [
   {
     title: "Tonkotsu Ramen",
-    price: 13.5,
+    price: 14.5,
   },
   {
     title: "Miso Ramen",
-    price: 14.5,
+    price: 15.5,
   },
   {
     title: "Tomato Ramen",
@@ -23,15 +23,15 @@ const data = [
   },
   {
     title: "Shoyu Ramen",
-    price: 12.5,
+    price: 13.5,
   },
   {
     title: "Shio Ramen",
-    price: 12.5,
+    price: 13.5,
   },
   {
     title: "Super Spicy Ramen",
-    price: 15,
+    price: 16,
   },
   {
     title: "Kaisen Ramen",
