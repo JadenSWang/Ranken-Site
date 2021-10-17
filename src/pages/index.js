@@ -6,6 +6,7 @@ import Section from "../components/section"
 import SEO from "../components/seo"
 import { BrowserView, MobileView } from "react-device-detect"
 import { Card, Row, Col, Button } from "react-materialize"
+import { createClient } from "contentful"
 import Img from "gatsby-image"
 
 const IndexPage = () => {
@@ -38,27 +39,28 @@ const IndexPage = () => {
   const [motd, setMotd] = useState("")
 
   useEffect(() => {
-    fetch("https://cms.jadenswang.com/items/rnh_meta")
-      .then(data => data.json())
-      .then(data => {
-        setMotd(data["data"]["motd"])
-      })
+    const client = createClient({
+      space: "sx5t0xh6rk72",
+      environment: "master", // defaults to 'master' if not set
+      accessToken: "S3jStNatOBM6kBUkySQx2THkeMpAh2hdD3GnJ_-6urM",
+    })
+
+    client
+      .getEntries()
+      .then(response => setMotd(response.items[0].fields.motd))
+      .catch(console.error)
   }, [])
 
   const mobileView = (
     <MobileView>
       <Layout>
-        <Card
+        <Section
           title={motd}
-          style={{
-            width: "84vw",
-            marginLeft: "8vw",
-            marginTop: "2vh",
-            textAlign: "center",
-            color: "#039be5",
-            fontSize: 10,
-          }}
-        ></Card>
+          body=""
+          to="/"
+          color="#0F0F0F"
+          textColor="white"
+        />
         <Section
           title="Dine In"
           subtitle="Authentic ramen. Simmered to perfection."
