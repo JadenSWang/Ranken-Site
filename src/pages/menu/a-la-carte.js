@@ -27,7 +27,7 @@ const data = [
   },
   {
     title: "Tempura Platter",
-    price: 20,
+    price: 25,
   },
   {
     title: "Fried Chicken Ponzu",
