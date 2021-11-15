@@ -80,6 +80,15 @@ const IndexPage = () => {
           label="Order Now"
         />
         <Section
+          title="Delivery"
+          subtitle="Zero fees. Skips the line. Saves time."
+          body=""
+          color="white"
+          link="https://www.ubereats.com/store/ranken-noodle-fhouse/1w3MTFvkWPiK5vHPXYUrxw"
+          textColor="#050505"
+          label="Get it Delivered Now"
+        />
+        <Section
           title="Locate"
           subtitle="Find some Ramen Near You!"
           body=""
@@ -156,7 +165,9 @@ const IndexPage = () => {
                     CARRY OUT
                   </Button>
                   <Button
-                    href=""
+                  onClick = {() => {
+                    window.location.href="https://www.ubereats.com/store/ranken-noodle-house/1w3MTFvkWPiK5vHPXYUrxw"
+                  }}
                     style={{
                       borderWidth: 10,
                       textAlign: "center",
@@ -165,7 +176,7 @@ const IndexPage = () => {
                       width: 200,
                     }}
                   >
-                    DELIVER (unavailable)
+                    DELIVER
                   </Button>
                 </div>
                 <div

@@ -114,7 +114,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/a-la-carte">
+                <Link to="/menu/a-la-carte">
                   <b>À La Carte</b>
                 </Link>
               }
@@ -126,7 +126,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/ramen">
+                <Link to="/menu/ramen">
                   <b>Ramen</b>
                 </Link>
               }
@@ -138,7 +138,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/udon">
+                <Link to="/menu/udon">
                   <b>Udon</b>
                 </Link>
               }
@@ -151,7 +151,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/soba">
+                <Link to="/menu/soba">
                   <b>Soba</b>
                 </Link>
               }
@@ -163,7 +163,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/rice">
+                <Link to="/menu/rice">
                   <b>Rice</b>
                 </Link>
               }
@@ -175,7 +175,7 @@ const MenuPage = () => {
           <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/skewers">
+                <Link to="/menu/skewers">
                   <b>Skewers</b>
                 </Link>
               }
@@ -187,7 +187,7 @@ const MenuPage = () => {
           {/* <Col s={12} l={4}>
             <Card
               title={
-                <Link to="menu/">
+                <Link to="/menu/">
                   <b>Bento Boxes</b>
                 </Link>
               }

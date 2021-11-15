@@ -37,7 +37,7 @@ const Section = ({ title, color, textColor, to, label, link }) => {
           </Card>
         </Link>
       ) : (
-        <a href="http://www.mealage.com/m.jsp?id=8155">
+        <a href={link}>
           <Card
             title={title}
             style={{
