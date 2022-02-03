@@ -164,20 +164,36 @@ const IndexPage = () => {
                   >
                     CARRY OUT
                   </Button>
-                  <Button
-                  onClick = {() => {
-                    window.location.href="https://www.ubereats.com/store/ranken-noodle-house/1w3MTFvkWPiK5vHPXYUrxw"
-                  }}
-                    style={{
-                      borderWidth: 10,
-                      textAlign: "center",
-                      backgroundColor: "orange",
-                      borderWidth: 10,
-                      width: 200,
-                    }}
-                  >
-                    DELIVER
-                  </Button>
+                  <div style={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', height: 80 }}>
+                    <Button
+                      onClick={() => {
+                        window.location.href = "https://www.ubereats.com/store/ranken-noodle-house/1w3MTFvkWPiK5vHPXYUrxw"
+                      }}
+                      style={{
+                        borderWidth: 10,
+                        textAlign: "center",
+                        backgroundColor: "orange",
+                        borderWidth: 10,
+                        width: 200,
+                      }}
+                    >
+                      Uber Eats
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        window.location.href = "https://order.online/business/ranken-noodle-house-1055348"
+                      }}
+                      style={{
+                        borderWidth: 10,
+                        textAlign: "center",
+                        backgroundColor: "orange",
+                        borderWidth: 10,
+                        width: 200,
+                      }}
+                    >
+                      DoorDash
+                    </Button>
+                  </div>
                 </div>
                 <div
                   style={{
