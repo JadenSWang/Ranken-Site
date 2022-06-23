@@ -184,18 +184,6 @@ const MenuPage = () => {
               }
             ></Card>
           </Col>
-          {/* <Col s={12} l={4}>
-            <Card
-              title={
-                <Link to="/menu/">
-                  <b>Bento Boxes</b>
-                </Link>
-              }
-              header={
-                <Img fluid={images.hamburger_steak.childImageSharp.fluid}></Img>
-              }
-            ></Card>
-          </Col> */}
         </Row>
       </div>
     </Layout>

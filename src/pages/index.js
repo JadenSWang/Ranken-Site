@@ -53,7 +53,7 @@ const IndexPage = () => {
 
   const mobileView = (
     <MobileView>
-      <Layout>
+      <Layout backgroundImage={images.front_menu_image.childImageSharp.fluid}>
         <Section
           title={motd}
           body=""
@@ -75,7 +75,7 @@ const IndexPage = () => {
           subtitle="Zero fees. Skips the line. Saves time."
           body=""
           color="white"
-          link="https://www.mealage.com/m.jsp?id=8155"
+          to="mobile-ordernow"
           textColor="#050505"
           label="Order Now"
         />
@@ -84,7 +84,7 @@ const IndexPage = () => {
           subtitle="Zero fees. Skips the line. Saves time."
           body=""
           color="white"
-          link="https://www.ubereats.com/store/ranken-noodle-fhouse/1w3MTFvkWPiK5vHPXYUrxw"
+          to="mobile-ordernow"
           textColor="#050505"
           label="Get it Delivered Now"
         />
@@ -107,8 +107,8 @@ const IndexPage = () => {
       <BrowserView>
         <Layout>
           <Row style={{ width: "80%", marginTop: "5%" }}>
-            <Col s={2} />
-            <Col s={4}>
+            <Col s={1} />
+            <Col s={5}>
               <Card
                 actions={[
                   <Link to="/menu" activeStyle={{ color: "#ff9900" }}>
@@ -120,65 +120,43 @@ const IndexPage = () => {
                 }
               ></Card>
             </Col>
-            <Col s={4}>
-              <div
-                style={{
-                  height: "50%",
-                  marginTop: "20%",
-                  paddingTop: 150,
-                  paddingBottom: 200,
-                  width: "100%",
-                }}
-              >
+            <Col s={5} style={{ height: "70vh" }}>
+              <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", paddingTop: 120 }}>
                 <div
                   style={{
                     fontFamily: "calibri",
                     fontSize: "2em",
-                    width: "88%",
-                    marginLeft: "6%",
-                    marginBottom: 50,
+                    textAlign: "center"
                   }}
                 >
-                  Authentic Japenese Cuisine you'll fall in love with.
+                  Authentic Japanese Cuisine you'll fall in love with.
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "col",
-                  }}
-                >
-                  <Button
-                    onClick={() => {
-                      window.location.href =
-                        "https://www.mealage.com/m.jsp?id=8155"
-                    }}
-                    style={{
-                      borderWidth: 10,
-                      textAlign: "center",
-                      borderWidth: 10,
-                      width: 200,
-                      backgroundColor: "orange",
-                      marginRight: 20,
-                    }}
-                  >
-                    CARRY OUT
-                  </Button>
-                  <div style={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', height: 80 }}>
+                <div style={{ display: "flex", justifyContent: "space-evenly", flexDirection: "row", paddingTop: 60 }}>
+                  <div style={{ display: "flex", flexDirection: "column", height: "11vh", justifyContent: "space-between" }}>
                     <Button
                       onClick={() => {
-                        window.location.href = "https://www.ubereats.com/store/ranken-noodle-house/1w3MTFvkWPiK5vHPXYUrxw"
+                        window.location.href = "https://www.toasttab.com/ranken-noodle-house2/v3/?mode=fulfillment"
                       }}
                       style={{
                         borderWidth: 10,
                         textAlign: "center",
                         backgroundColor: "orange",
                         borderWidth: 10,
-                        width: 200,
+                        width: "12vw",
+                      }}>Carry Out</Button>
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", height: "18vh", justifyContent: "space-between" }}>
+                    <Button
+                      onClick={() => {
+                        window.location.href = "https://www.order.store/store/ranken-noodle-house/1w3MTFvkWPiK5vHPXYUrxw"
                       }}
-                    >
-                      Uber Eats
-                    </Button>
+                      style={{
+                        borderWidth: 10,
+                        textAlign: "center",
+                        backgroundColor: "orange",
+                        borderWidth: 10,
+                        width: "12vw",
+                      }}>Uber Eats</Button>
                     <Button
                       onClick={() => {
                         window.location.href = "https://order.online/business/ranken-noodle-house-1055348"
@@ -188,30 +166,19 @@ const IndexPage = () => {
                         textAlign: "center",
                         backgroundColor: "orange",
                         borderWidth: 10,
-                        width: 200,
+                        width: "12vw",
+                      }}>DoorDash</Button>
+                    <Button
+                      onClick={() => {
+                        window.location.href = "http://menus.fyi/3192292"
                       }}
-                    >
-                      DoorDash
-                    </Button>
-                  </div>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "col",
-                    marginTop: 40,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: "calibri",
-                      fontSize: "1.2em",
-                      marginLeft: "6%",
-                      textAlign: "center",
-                    }}
-                  >
-                    Chef Li's Message: "{motd}"
+                      style={{
+                        borderWidth: 10,
+                        textAlign: "center",
+                        backgroundColor: "orange",
+                        borderWidth: 10,
+                        width: "12vw",
+                      }}>GrubHub</Button>
                   </div>
                 </div>
               </div>
