@@ -36,28 +36,14 @@ const IndexPage = () => {
     }
   `)
 
-  const [motd, setMotd] = useState("")
-
-  useEffect(() => {
-    const client = createClient({
-      space: "sx5t0xh6rk72",
-      environment: "master", // defaults to 'master' if not set
-      accessToken: "S3jStNatOBM6kBUkySQx2THkeMpAh2hdD3GnJ_-6urM",
-    })
-
-    client
-      .getEntries()
-      .then(response => setMotd(response.items[0].fields.motd))
-      .catch(console.error)
-  }, [])
-
   const mobileView = (
     <MobileView>
       <Layout backgroundImage={images.front_menu_image.childImageSharp.fluid}>
         <Section
-          title={motd}
+          title={'How its made'}
+          label="Read about it here"
           body=""
-          to="/"
+          to="mobile-howitsmade"
           color="#0F0F0F"
           textColor="white"
         />
@@ -75,7 +61,7 @@ const IndexPage = () => {
           subtitle="Zero fees. Skips the line. Saves time."
           body=""
           color="white"
-          to="mobile-ordernow"
+          link="https://www.toasttab.com/ranken-noodle-house2/v3/?mode=fulfillment"
           textColor="#050505"
           label="Order Now"
         />
@@ -138,7 +124,6 @@ const IndexPage = () => {
                         window.location.href = "https://www.toasttab.com/ranken-noodle-house2/v3/?mode=fulfillment"
                       }}
                       style={{
-                        borderWidth: 10,
                         textAlign: "center",
                         backgroundColor: "orange",
                         borderWidth: 10,
@@ -154,7 +139,6 @@ const IndexPage = () => {
                         borderWidth: 10,
                         textAlign: "center",
                         backgroundColor: "orange",
-                        borderWidth: 10,
                         width: "12vw",
                       }}>Uber Eats</Button>
                     <Button
@@ -162,23 +146,11 @@ const IndexPage = () => {
                         window.location.href = "https://order.online/business/ranken-noodle-house-1055348"
                       }}
                       style={{
-                        borderWidth: 10,
                         textAlign: "center",
                         backgroundColor: "orange",
                         borderWidth: 10,
                         width: "12vw",
                       }}>DoorDash</Button>
-                    <Button
-                      onClick={() => {
-                        window.location.href = "http://menus.fyi/3192292"
-                      }}
-                      style={{
-                        borderWidth: 10,
-                        textAlign: "center",
-                        backgroundColor: "orange",
-                        borderWidth: 10,
-                        width: "12vw",
-                      }}>GrubHub</Button>
                   </div>
                 </div>
               </div>
